@@ -1,22 +1,22 @@
+import React from "react";
 import styled from "styled-components";
+import { ThemeProvider } from "styled-components";
 import Footer from "./components/footer/footer.js";
 import Header from "./components/header/Header.js";
 import { Router } from "./route/Router";
-
-const Page = styled.body`
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 7.5fr 1.5fr;
-`
+import theme from './constants/theme';
+import {Page} from "./Styled.js"
 
 function App() {
 
   return (
-    <Page>
-      <Header />
-      <Router />
-      <Footer />
-    </Page>
+    <ThemeProvider theme={theme}>
+      <Page>
+        <Header />
+        <Router />
+        <Footer />
+      </Page>
+    </ThemeProvider>
   );
 };
 
