@@ -6,6 +6,7 @@ import hourglass from "../../assets/hourglass.png";
 import calendar from "../../assets/calendar.png";
 import ButtonBackPage from "../../components/buttonBackPage/ButtonBackPage";
 import { MainContainer, CardTrip, CardTitle, CardInfo, CardsContainer, SubscribeButton, Message  } from "./Styles";
+import { CircularProgress } from '@mui/material';
 
 export default function ListTripsPage () {
     const [trips, isLoadingTrips, errorTrips] = useTripsListRequest();
@@ -40,7 +41,7 @@ export default function ListTripsPage () {
             <h2>Confira os nossos Destinos</h2>
             <SubscribeButton onClick={goToApplicationFormPage} >Inscreva-se</SubscribeButton>
             <CardsContainer>
-                {isLoadingTrips && <Message>Carregando destinos ...</Message>}
+                {isLoadingTrips && <CircularProgress sx={{margin: "25px auto", gridColumn: "1/-1"}} />}
                 {!isLoadingTrips && errorTrips && <Message>Desculpe-nos, ocorreu um erro inesperado. Por favor, tente novamente mais tarde.</Message>}
                 {!isLoadingTrips && trips && trips.length === 0 && <Message>Não há destinos disponíveis</Message>} 
                 {!isLoadingTrips && trips && <>{tripsList}</>}
