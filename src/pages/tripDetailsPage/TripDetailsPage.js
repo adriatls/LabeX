@@ -12,6 +12,7 @@ import description from "../../assets/description.png";
 import candidates from "../../assets/candidates.png";
 import { MainContainer, CardInfo, CandidateTitle, CandidatesArea, CandidatesCard, DetailCard, ButtonsContainer, Message } from "./Styles.js";
 import ButtonBackPage from "../../components/buttonBackPage/ButtonBackPage.js"
+import { CircularProgress } from "@mui/material";
 
 export default function TripDetailsPage () {
     useProtectedPage();
@@ -92,7 +93,7 @@ export default function TripDetailsPage () {
     return (
         <MainContainer>
             {isLoading 
-            ? <Message>Carregando detalhes do destino ...</Message>
+            ? <CircularProgress />
             : (<div>
                 <h2>{detailedTrip.name}</h2>
                 <DetailCard>
