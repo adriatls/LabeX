@@ -8,6 +8,7 @@ import { contentType } from "../../constants/headers.js";
 import { Button } from "../../components/buttonBackPage/style.js";
 import cancel from "../../assets/delete.png";
 import { MainContainer, CardsContainer, CardTrip, ButtonsContainer, Message } from "./Styles";
+import { CircularProgress } from "@mui/material";
 
 export default function AdminHomePage () {
     useProtectedPage();
@@ -60,7 +61,8 @@ export default function AdminHomePage () {
         <MainContainer>
             <h2>Painel Administrativo</h2>
             <CardsContainer>
-                {isLoadingTrips && <Message>Carregando destinos ...</Message>}
+                {isLoadingTrips && <CircularProgress />}
+                {/* {isLoadingTrips && <Message>Carregando destinos ...</Message>} */}
                 {!isLoadingTrips && errorTrips && <Message>Desculpe-nos, ocorreu um erro inesperado. Por favor, tente novamente mais tarde.</Message>}
                 {!isLoadingTrips && trips && trips.length === 0 && <Message>Lista de destinos indisponíveis</Message>} 
                 {!isLoadingTrips && trips && tripsList}
