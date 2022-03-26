@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminHomePage from "../pages/adminHomePage/AdminHomePage";
 import ApplicationFormPage from "../pages/applicationFormPage/ApplicationFormPage";
 import CreateTripPage from "../pages/createTripPage/CreateTripPage";
+import ErrorPage from "../pages/errorPage/ErrorPage";
 import HomePage from "../pages/homePage/HomePage";
 import ListTripsPage from "../pages/listTripsPage/ListTripsPage";
 import LoginPage from "../pages/loginPage/LoginPage";
@@ -24,6 +25,8 @@ export const Router = () => {
                 <Route exact path={"/admin/trips/create"} element={<CreateTripPage />} />
 
                 <Route exact path={"/admin/trips/:id"} element={<TripDetailsPage />} />
+            
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
     );

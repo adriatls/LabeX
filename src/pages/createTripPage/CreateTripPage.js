@@ -43,8 +43,6 @@ export default function CreateTripPage () {
                 durationInDays: Number(form.durationInDays)
             }
 
-            console.log(body)
-
             try {
                 const response = await axios.post(`${URL_BASE}/trips`, body, headersConfig);
                 alert("Novo destino espacial criado com sucesso!")

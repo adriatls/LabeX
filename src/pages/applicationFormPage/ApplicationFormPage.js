@@ -47,7 +47,6 @@ export default function ApplicationFormPage () {
         };
 
         const body = {...form, age: Number(form.age), country: country}
-        console.log(body)
 
         try {
             const response = await axios.post(`${URL_BASE}/trips/${id}/apply`, body, headersConfig);
