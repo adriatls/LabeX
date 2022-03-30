@@ -1,6 +1,6 @@
-<h1 align="center" id="top" border="none">🪐 SpaceX 🪐</h1>
+<h1 align="center" id="top" border="none">🪐 LabeX 🪐</h1>
 
-### Link do Surge: <a href="http://daffy-experience.surge.sh/" target="_blank" title="Veja o projeto">SpaceX</a>
+### Link do Surge: <a href="http://daffy-experience.surge.sh/" target="_blank" title="Veja o projeto">LabeX</a>
 
 <div align="center">
 <a href="#sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#funciona">O que funciona</a> | <a href="#nao-funciona">Backlog</a> | <a href='#img-desktop'>Imagens Desktop</a> | <a href='#img-mobile'>Imagens Mobile</a> 
