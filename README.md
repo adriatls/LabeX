@@ -44,6 +44,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## <h2 id="nao-funciona">📋 Backlog</h2>
 * BugFix: background-image pode não ser renderizado na tela e é necessário fechar e reabrir a aplicação.
+* Header:
+    * Pôr onClick na logo para redirecionar para página de homepage;
+    * Pôr backbutton no lado direito da tela.
 
 ## <h2 id="img-desktop">💻 Imagens Desktop</h2>
 
